@@ -1,0 +1,8 @@
+pycache
+.idea
+venv
+venv/
+/debug.log
+*.рус
+*.log
+!debug.log
