@@ -1,7 +1,12 @@
-def filter_by_state(transactions, state='EXECUTED'):
-    """фильтрует список транзакций по состоянию"""
-    return [transaction for transaction in transactions if transaction.get('state') == state]
+from datetime import datetime
 
-def sort_by_date(transactions, reverse=True):
-    """сортирует список транзакций по дате"""
-    return sorted(transactions, key=lambda x: x['date'], reverse=reverse)
+
+def filter_by_state(data, state="EXECUTED"):
+    """Фильтрует список словарей по значению ключа state"""
+    return [item for item in data if item.get("state") == state]
+
+
+def sort_by_date(data, descending=True):
+    """Сортирует список словарей по значению ключа date"""
+    return sorted(
+        data, key=lambda x: datetime.fromisoformat(x["date"]), reverse=descending)
