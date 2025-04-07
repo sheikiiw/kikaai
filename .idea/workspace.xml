@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1779d8a-4bff-47d9-950f-06aab8b65559" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/test_masks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_masks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_widget.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +57,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests in test_widget.py.executor": "Run",
     "Python.__init__.executor": "Run",
     "Python.masks.executor": "Run",
     "Python.widget.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/homework__10__2",
+    "git-widget-placeholder": "feature/homewwork__10__2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>

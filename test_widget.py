@@ -1,5 +1,5 @@
 import pytest
-from widget import get_mask_card_number, get_mask_account, get_date
+from src.widget import get_mask_card_number, get_mask_account, get_date
 
 def test_get_mask_card_number_widget():
     assert get_mask_card_number("12345678901234567890") == "123456789012 3456 78 **** 90"

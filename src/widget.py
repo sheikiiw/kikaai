@@ -1,4 +1,4 @@
-def get_mask_card_number(number: str):
+def get_mask_card_number(number: str) -> object:
     """Срез чисел"""
     delive = number[:13]
     zeebbed = number[14:18]
