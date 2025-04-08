@@ -4,7 +4,6 @@ def get_mask_card_number(number: str) -> object:
     zeebbed = number[14:18]
     fancy = number[18:20]
     many = number[-4:]
-
     return f"{delive} {zeebbed} {fancy} **** {many}"
 
 
@@ -12,7 +11,6 @@ def get_mask_account(number: str):
     """Возврат замаскированного числа"""
     meow = number[-4:]
     return f"{meow}"
-
 
 
 def get_date(date: str):
