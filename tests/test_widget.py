@@ -1,6 +1,6 @@
 import pytest
 
-from src.widget import get_date, get_mask_card_number
+from src.widget import get_date, mask_account_card
 
 
 @pytest.mark.parametrize(
@@ -13,7 +13,7 @@ from src.widget import get_date, get_mask_card_number
     ],
 )
 def test_mask_account_card(acc: str, expected: str) -> None:
-    assert get_mask_card_number(acc) == expected
+    assert mask_account_card(acc) == expected
 
 
 @pytest.mark.parametrize("acc", ["", None, "gdfngdf gdf", "1234", "867524565463"])
@@ -21,15 +21,15 @@ def test_mask_account_card_invalid(acc: str) -> None:
     """проверка на typeerror"""
     if acc is None:
         with pytest.raises(TypeError):
-            get_mask_card_number(acc)
+            mask_account_card(acc)
 
 
 @pytest.mark.parametrize(
     "date, expected",
     [
-        ("2023-08-15", "15.08.23"),
-        ("2000-01-01", "01.01.00"),
-        ("2024-03-11T02:26:18.671407", "11.03.24"),
+        ("2023-08-15", "15.08.2023"),
+        ("2000-01-01", "01.01.2000"),
+        ("2024-03-11T02:26:18.671407", "11.03.2024"),
     ],
 )
 def test_get_date(date: str, expected: str) -> None:

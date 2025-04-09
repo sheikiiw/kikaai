@@ -1,16 +1,14 @@
-def get_mask_card_number(number: str) -> object:
-    """Срез чисел"""
-    delive = number[:13]
-    zeebbed = number[14:18]
-    fancy = number[18:20]
-    many = number[-4:]
-    return f"{delive} {zeebbed} {fancy} **** {many}"
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def get_mask_account(number: str):
-    """Возврат замаскированного числа"""
-    meow = number[-4:]
-    return f"{meow}"
+def mask_account_card(account: str):
+    """Функция маскировки"""
+    name = account.split()
+    number = name.pop()
+    if "Счет" in account:
+        return f"Счет {get_mask_account(number)}"
+    else:
+        return " ".join(name) + " " + get_mask_card_number(number)
 
 
 def get_date(date: str):
