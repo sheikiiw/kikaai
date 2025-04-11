@@ -47,7 +47,6 @@ def log(filename: Optional[str] = None) -> Callable:
     return decorator
 
 
-# Пример использования
 if __name__ == "__main__":
     @log(filename="mylog.txt")
     def my_function(x: int, y: int) -> int:

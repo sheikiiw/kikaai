@@ -13,7 +13,7 @@ def test_log_successful_execution(capsys):
     captured = capsys.readouterr()
 
     assert result == 5
-    assert "add ok. Result: 5" in captured.out
+    assert "add ok. Result: 5" in captured.err
 
 
 def test_log_with_file(tmp_path):
@@ -37,13 +37,10 @@ def test_log_error_case(capsys):
     @log()
     def divide(a: float, b: float) -> float:
         return a / b
-
     with pytest.raises(ZeroDivisionError):
         divide(1, 0)
-
     captured = capsys.readouterr()
-    assert "divide error: ZeroDivisionError" in captured.out
-    assert "Inputs: (1, 0), {}" in captured.out
+    assert "divide error: ZeroDivisionError. Inputs: (1, 0), {}" in captured.err
 
 
 def test_log_error_with_file(tmp_path):
