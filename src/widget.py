@@ -13,7 +13,6 @@ def get_mask_account(number: str):
     return f"{meow}"
 
 
-
 def get_date(date: str):
     """Вывод даты"""
     day = date[8:10]
