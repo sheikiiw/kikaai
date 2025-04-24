@@ -30,3 +30,4 @@ def test_filter_by_state(sample_transactions: List[Dict[str, Any]], state: str, 
 
 def test_filter_by_state_empty() -> None:
     assert sort_by_date([]) == []
+
