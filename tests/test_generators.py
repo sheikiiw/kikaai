@@ -1,6 +1,7 @@
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
 
+
 @pytest.fixture
 def sample_transactions():
     return [
@@ -52,8 +53,6 @@ def test_transaction_descriptions_empty():
     (5, 5, 1),
     (10, 12, 3),
 ])
-
-
 def test_card_number_generator_count(start, end, expected_count):
     cards = list(card_number_generator(start, end))
     assert len(cards) == expected_count
