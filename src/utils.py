@@ -1,7 +1,7 @@
 import json
 import os
 
-#s
+
 def load_transactions(file_path):
     if not os.path.exists(file_path):
         return []
