@@ -21,7 +21,7 @@ def convert(dict_transaction):
         return result.get("result")
     except (KeyError, TypeError, ValueError):
         return None
-
+#e
 
 def total_amount(dict_transaction):
     count = 0

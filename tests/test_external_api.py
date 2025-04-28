@@ -3,7 +3,7 @@ from unittest.mock import Mock, patch
 
 from src.external_api import convert, total_amount
 
-
+#e
 class TestCurrencyConversion(unittest.TestCase):
 
     @patch("requests.get")
