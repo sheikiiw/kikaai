@@ -2,7 +2,7 @@ import json
 import os
 import logging
 
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 file_handler = logging.FileHandler('../logs/utils.log')
 file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 file_handler.setFormatter(file_formatter)
@@ -28,7 +28,7 @@ def load_transactions(file_path):
                 logger.info(f"Успешно загружено {len(data)} транзакций.")
                 return data
             else:
-                logger.warning(f"Ожидался список, но получен другой тип данных.")
+                logger.warning("Ожидался список, но получен другой тип данных.")
                 return []
     except (json.JSONDecodeError, ValueError) as e:
         logger.error(f"Ошибка при чтении JSON из {file_path}: {e}")
