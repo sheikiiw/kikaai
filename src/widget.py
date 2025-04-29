@@ -1,21 +1,15 @@
-def get_mask_card_number(number: str):
-    """Маскирует номер карты, скрывая часть цифр"""
-    if not number or len(number) < 20:
-        raise ValueError("Номер карты должен содержать минимум 20 символов")
-    first = number[:13]
-    second = number[14:18]
-    third = number[18:20]
-    last = number[-4:]
-    return f"{first} {second} {third} **** {last}"
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def get_mask_account(number: str):
-    """Возвращает замаскированный номер счета"""
-    if not number or len(number) < 4:
-        raise ValueError("Номер счета должен содержать минимум 4 символа")
-    once = number[-4:]
-    return f"**** {once}"  # Добавляем маскировку для большей наглядности
-
+def mask_account_card(number_string: str) -> str:
+    """Функция маскировки счета и карт"""
+    number_list = number_string.split()
+    number = number_list.pop()
+    name_card = " ".join(number_list)
+    if "Счет" in name_card:
+        return f"Счет {get_mask_account(number)}"
+    else:
+        return f"{name_card} {get_mask_card_number(number)}"
 
 def get_date(date: str):
     """Форматирует дату в вид ДД.ММ.ГГГГ."""
