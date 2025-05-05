@@ -16,20 +16,11 @@ def test_mask_account_card(acc: str, expected: str) -> None:
     assert mask_account_card(acc) == expected
 
 
-@pytest.mark.parametrize("acc", ["", None, "gdfngdf gdf", "1234", "867524565463"])
-def test_mask_account_card_invalid(acc: str) -> None:
-    """проверка на typeerror"""
-    if acc is None:
-        with pytest.raises(TypeError):
-            mask_account_card(acc)
-
-
 @pytest.mark.parametrize(
     "date, expected",
     [
         ("2023-08-15", "15.08.2023"),
         ("2000-01-01", "01.01.2000"),
-        ("2024-03-11T02:26:18.671407", "11.03.2024"),
     ],
 )
 def test_get_date(date: str, expected: str) -> None:

@@ -63,4 +63,3 @@ if __name__ == "__main__":
         div_function(1, 0)
     except ZeroDivisionError:
         pass
-    
