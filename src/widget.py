@@ -11,6 +11,7 @@ def mask_account_card(number_string: str) -> str:
     else:
         return f"{name_card} {get_mask_card_number(number)}"
 
+
 def get_date(date: str):
     """Форматирует дату в вид ДД.ММ.ГГГГ."""
     if not date or len(date) != 10 or date[4] != '-' or date[7] != '-':
