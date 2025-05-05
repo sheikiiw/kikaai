@@ -3,6 +3,7 @@ import pandas as pd
 
 
 def read_csv_transactions(file_path: str) -> List[Dict[str, Any]]:
+    """cчитывает финансовые операции из CSV файла и возвращает список словарей"""
     try:
         df = pd.read_csv(file_path)
         return df.to_dict(orient="records")
@@ -13,6 +14,7 @@ def read_csv_transactions(file_path: str) -> List[Dict[str, Any]]:
 
 
 def read_excel_transactions(file_path: str) -> List[Dict[str, Any]]:
+    """считывает финансовые операции из Excel файла и возвращает список словарей"""
     try:
         df = pd.read_excel(file_path)
         return df.to_dict(orient="records")
