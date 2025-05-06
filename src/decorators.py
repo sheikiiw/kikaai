@@ -57,10 +57,8 @@ if __name__ == "__main__":
     def div_function(a: float, b: float) -> float:
         """Деление двух чисел."""
         return a / b
-
     my_function(1, 2)
     try:
         div_function(1, 0)
     except ZeroDivisionError:
         pass
-    

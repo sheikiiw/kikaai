@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
-
 from datetime import datetime
+
 
 def filter_by_state(data: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
     """Фильтрует список словарей по значению ключа state"""
